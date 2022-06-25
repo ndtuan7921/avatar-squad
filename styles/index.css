@@ -1,1 +1,118 @@
-/*# sourceMappingURL=index.css.map */
+/* fonts */
+/* colors */
+/* h1 - heading & paragraph */
+/* h2 - heading & paragraph */
+/* h4 - heading & paragraph */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 12px 50px;
+}
+
+/*-- === Banner === --*/
+.banner {
+  max-width: 100w;
+  height: 45px;
+  background-color: #cff800;
+  display: flex;
+  align-items: center;
+}
+.banner .container .content {
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: 500;
+  text-align: center;
+}
+.banner .container .content a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0075eb;
+}
+
+/*-- === Header === --*/
+header {
+  max-width: 100vw;
+  height: 75px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: hsla(0deg, 0%, 100%, 0.7);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .logo {
+  width: 155px;
+  height: 30px;
+}
+header .container .logo img {
+  width: 100%;
+}
+header .container nav {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .container nav ul {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .container nav ul li {
+  list-style: none;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding: 6px 8px;
+}
+header .container nav ul li a {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #0f0f0f;
+  cursor: pointer;
+}
+header .container nav .icon a {
+  font-size: 1.5rem;
+  color: #0075eb;
+}
+header .container nav .button {
+  background-color: #0075eb;
+  border-radius: 8px;
+  box-shadow: 0 3px 0 0 rgba(32, 32, 32, 0.05);
+  padding: 8px 20px;
+  cursor: pointer;
+}
+header .container nav .button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+}
+header .container nav .button:hover {
+  background-color: #0259b1;
+  border-radius: 8px;
+  box-shadow: 0 3px 0 0 rgba(32, 32, 32, 0.05);
+  padding: 8px 20px;
+  cursor: pointer;
+}
+header .container nav .button:hover a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+}/*# sourceMappingURL=index.css.map */

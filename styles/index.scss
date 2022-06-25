@@ -1,3 +1,98 @@
 @import 'variables';
-@import 'button';
-@import 'heading';
+@import './mixins/layout';
+@import './mixins/button';
+@import './mixins/heading';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fonts;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 12px 50px;
+}
+
+/*-- === Banner === --*/
+.banner {
+    max-width: 100w;
+    height: 45px;
+    background-color: $primary-green;
+    @include flex-layout;
+
+    .container {
+        .content {
+            font-size: 14px;
+            line-height: 1.4em;
+            font-weight: 500;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+                color: $primary-blue;
+            }
+        }
+    }
+}   
+
+/*-- === Header === --*/
+header {
+    max-width: 100vw;
+    height: 75px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: hsla(0, 0%, 100%, 0.7);
+    .container {
+        @include flex-layout;
+        justify-content: space-between;
+        .logo {
+            width: 155px;
+            height: 30px;
+            img {
+                width: 100%;
+            }
+        }
+        nav {
+            width: 80%;
+            @include flex-layout;
+            justify-content: space-evenly;
+            ul {
+                width: 70%;
+                @include flex-layout;
+                justify-content: flex-end;
+                li {
+                    list-style: none;
+                    margin-right: 4px;
+                    margin-left: 4px;
+                    padding: 6px 8px;
+                    a {
+                        font-size: 15px;
+                        line-height: 24px;
+                        font-weight: 500;
+                        text-decoration: none;
+                        color: $primary-black;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .icon {
+                a {
+                    font-size: 1.5rem;
+                    color: $primary-blue;
+                }
+            }
+
+            .button {
+                @include button($primary-blue,$hover-blue);
+                
+            }
+        }
+    }
+    position: sticky;   
+    top: 0;
+}
+
