@@ -1,0 +1,39 @@
+/* h1 - heading & paragraph */
+@mixin heading_h2 {
+    margin-bottom: 24px;
+    font-size: 90px;
+    line-height: 1.2em;
+}
+
+@mixin para_h1 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+/* h2 - heading & paragraph */
+@mixin heading_h2 {
+    margin-bottom: 20px;
+    font-size: 46px;
+    line-height: 1.2em;
+}
+
+@mixin para_h2 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+/* h4 - heading & paragraph */
+@mixin heading_h4 {
+    margin-bottom: 4px;
+    font-size: 22px;
+    line-height: 1.4em;
+}
+@mixin para_h4 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
