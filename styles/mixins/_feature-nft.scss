@@ -1,0 +1,31 @@
+@mixin feature-nft-1 {
+    left: -195px;
+    transform: rotate(11deg);
+}
+@mixin feature-nft-2 {
+    top: 350px;
+    left: 350px;
+    transform: rotate(11deg);
+}
+@mixin feature-nft-3 {
+    top: -190px;
+    right: -270px;
+    transform: rotate(-9deg);
+}
+@mixin feature-nft-4 {
+    top: -355px;
+    right: 233px;
+    transform: rotate(29deg);
+}
+@mixin feature-nft-5 {
+    top: 300px;
+    right: -525px;
+    transform: rotate(-9deg);
+}
+@mixin feature-nft-6 {
+    top: -780px;
+    right: 560px;
+    transform: rotate(-9deg);
+}
+
+

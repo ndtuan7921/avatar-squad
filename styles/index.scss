@@ -2,6 +2,7 @@
 @import './mixins/layout';
 @import './mixins/button';
 @import './mixins/heading';
+@import './mixins/feature-nft';
 
 * {
     margin: 0;
@@ -11,14 +12,15 @@
 }
 
 .container {
+    width: 1230px;
     margin: 0 auto;
     padding: 12px 50px;
 }
 
 /*-- === Banner === --*/
 .banner {
-    max-width: 100w;
-    height: 45px;
+    width: 100%;
+    //height: 45px;
     background-color: $primary-green;
     @include flex-layout;
 
@@ -40,11 +42,10 @@
 
 /*-- === Header === --*/
 header {
-    max-width: 100vw;
-    height: 75px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    width: 100%;
+    //height: 75px;
     background-color: hsla(0, 0%, 100%, 0.7);
+    backdrop-filter: blur(5px);
     .container {
         @include flex-layout;
         justify-content: space-between;
@@ -58,7 +59,7 @@ header {
         nav {
             width: 80%;
             @include flex-layout;
-            justify-content: space-evenly;
+            justify-content: space-between;
             ul {
                 width: 70%;
                 @include flex-layout;
@@ -75,6 +76,10 @@ header {
                         text-decoration: none;
                         color: $primary-black;
                         cursor: pointer;
+                        
+                    }
+                    :hover {
+                        color: $hover-blue;
                     }
                 }
             }
@@ -86,13 +91,393 @@ header {
                 }
             }
 
-            .button {
-                @include button($primary-blue,$hover-blue);
+            .button a {
+                @include button($primary-blue,$hover-blue,#fff,20px,15px);
                 
             }
         }
     }
     position: sticky;   
     top: 0;
+    z-index: 10;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/*-- === Hero Section === --*/
+.hero {
+    width: 100%;
+    height: 100vh;
+    //padding-top: 7rem;
+    //padding-bottom: 10.5rem;
+    text-align: center;
+    @include flex-layout;
+    overflow: hidden;
+    .container {
+        .hero_content {
+            margin: 0 auto;
+            max-width: 650px;
+            @include flex-layout;
+            flex-direction: column;
+            position: relative;
+            .feature-nft {
+                max-width: 288px;
+                max-height: 315px;
+                
+                position: absolute;
+                z-index: -1;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    display: block;
+                }
+            }
+            .feature-nft-1 {
+                @include feature-nft-1;
+            }
+            .feature-nft-2 {
+                @include feature-nft-2;
+            }
+            .feature-nft-3 {
+                @include feature-nft-3;
+            }
+            .feature-nft-4 {
+                @include feature-nft-4;
+            }
+            .feature-nft-5 {
+                @include feature-nft-5;
+            }
+            .feature-nft-6 {
+                @include feature-nft-6;
+            }
+            .script-font {
+                width: 400px;
+                position: absolute;
+            }
+            h1 {
+                @include heading_h1;
+            }
+            .text-box {
+                max-width: 550px;
+                p {
+                    @include para_h1;
+                }
+                
+            }
+            .button a {
+                @include button($primary-green,$hover-green,$primary-black,32px,18px);
+                
+            }
+        }
+    }
+}
+
+/*-- === About Section === --*/
+.about {
+    background-color: $primary-blue;
+    width: 100%;
+    .container {
+        .about__content {
+            @include flex-layout;
+            justify-content: flex-start;
+            &-left {
+                width: 45%;
+                color: #fff;
+                position: relative;
+                img {
+                    width: 284px;
+                    position: absolute;
+                    top: 45px;
+                    left: 20px;
+                }
+                h2 {
+                    @include heading_h2;
+                }
+                p {
+                    @include para_h2;
+                }
+                .button a {
+                    @include button($primary-green,$hover-green,$primary-black,15px,18px);
+                }
+            }
+            &-right {
+                margin-left: 8rem;
+                img {
+                    max-width: 382px;
+                }
+            }
+        }
+    }
+}
+/*-- === Roadmap Section === --*/
+.roadmap {
+    width: 100%;
+    background-color: $secondary-blue;
+    .container {
+        .roadmap__content {
+            @include flex-layout;
+            justify-content: space-around;
+            position: relative;
+            &-left {
+                img {
+                    width: 382px;
+                }
+            }
+            &-right {
+                max-width: 510px;
+                img {
+                    width: 202px;
+                    position: absolute;
+                    top: -12px;
+                }
+                h2 {
+                    @include heading_h2;
+                }
+                p {
+                    @include para_h2;
+                }
+                li {
+                    list-style: none;
+                    margin-bottom: 24px;
+                    padding: 20px 24px 8px;
+                    border-radius: 6px;
+                    background-color: #fff;
+                    h4 {
+                        @include heading_h4;
+                        span {
+                            color: $primary-blue;
+                            margin-right: 5px;
+                        }
+                    }
+                    p {
+                        @include para_h4;
+                    }
+                }
+            }
+        }
+    }
+}
+/*-- === Rarity Section === --*/
+.Rarity {
+    width: 100%;
+    background-color: #fff;
+    .container {
+        .Rarity__content {
+            @include flex-layout;
+            justify-content: space-between;
+            &-left {
+                position: relative;
+                img {
+                    width: 130px;
+                    position: absolute;
+                    top: -12px;
+                    left: 2px;
+                }
+                h2 {
+                    @include heading_h2;
+                }
+                p {
+                    @include para_h2;
+                }
+                li {
+                    list-style: none;
+                    width: 320px;
+                    //height: 42px;
+                    font-size: 18px;
+                    line-height: 1.2em;
+                    margin-bottom: 8px;
+                    padding: 10px 14px;
+                    border-radius: 3px;
+                    @include flex-layout;
+                    justify-content: space-between;
+                    > div:first-child{
+                        font-weight: bold;
+                    }
+                }
+            }
+            &-right {
+                img {
+                    width: 644px;
+                }
+            }
+        }
+    }
+}
+
+/*-- === Creator Section === --*/
+.creator {
+    background-color: $primary-blue;
+    width: 100%;
+    .container {
+        .creator__content {
+            
+            @include flex-layout;
+            justify-content: space-around;
+            &-left {
+                img {
+                    width: 460px;
+                }
+            }
+            &-right {
+                width: 40%;
+                color: #fff;
+                position: relative;
+                img {
+                    width: 160px;
+                    position: absolute;
+                    top: -10px;
+                }
+                h2 {
+                    @include heading_h2;
+                }
+                p {
+                    @include para_h2;
+                }
+                .button a {
+                    @include button($primary-green,$hover-green,$primary-black,15px,18px);
+                }
+            }
+        }
+    }
+}
+
+/*-- === call-action Section === --*/
+.call-action {
+    width: 100%;
+    background-color: $primary-green;
+    .container {
+        .call-action__content {
+            @include flex-layout;
+            justify-content: space-between;
+            &-left {
+                max-width: 650px;
+                h2 {
+                    @include heading_h2;
+                }
+                p {
+                    @include para_h2;
+                }
+                .button a {
+                    @include button($primary-blue,$hover-blue,#fff,32px,18px);
+                }
+            }
+            &-right {
+                width: 100%;
+                //position: relative;
+                img {
+                    display: block;
+                    width: 110%;
+                    margin: -418px auto;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+/*-- === Footer Section === --*/
+footer {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 65px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    .container {
+        .footer__content {
+            width: 100%;
+            height: 286px; 
+            @include flex-layout;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            &-top {
+                width: 100%;
+                @include flex-layout;
+                justify-content: space-between;
+                .main-box {
+                    max-width: 450px;
+                    .logo {
+                        width: 155px;
+                        height: 30px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    p {
+                        @include para_h2;
+                        margin-top: 30px;
+                    }
+                }
+                .links {
+                    width: 300px;
+                    @include flex-layout;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    h4 {
+                        color: #99a4af;
+                        font-size: 14px;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                        margin-bottom: 12px;
+                    }
+                    li {
+                        list-style: none;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        a {
+                            color: #0f0f0f;
+                            font-size: 15px;
+                            
+                            text-decoration: none;
+                            cursor: pointer;
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+
+            }
+            &-bottom {
+                width: 100%;
+                @include flex-layout;
+                justify-content: space-between;
+                .small-text-box {
+                    max-width: 450px;
+                    opacity: 0.75;
+                    font-size: 14px;
+                    line-height: 1.4em;
+                    a {
+                        border-bottom-color: #9dcbf8;
+                        color: #0075eb;
+                    }
+                }
+                .social-links {
+                    width: 300px;
+                    a {
+                        font-size: 1.5rem;
+                        color: $primary-blue;
+                        padding: 8px;
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: #dfeeff;
+                        border-radius: 8px;
+                        &:hover {
+                            background-color: #dfeeff;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }
 
