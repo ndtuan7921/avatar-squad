@@ -454,6 +454,69 @@ header .container nav .button a:hover {
   font-weight: 500;
 }
 
+/*-- === FAQs Section === --*/
+.FAQs {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.FAQs .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.FAQs .container h1 {
+  margin-bottom: 20px;
+  font-size: 46px;
+  line-height: 1.2em;
+}
+.FAQs .container .accordion {
+  width: 70%;
+  margin-top: 1.5rem;
+}
+.FAQs .container .accordion__item {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 28px 28px 16px;
+  background-color: #f1f8ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.FAQs .container .accordion__item .question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.FAQs .container .accordion__item .question h4 {
+  margin-bottom: 4px;
+  font-size: 22px;
+  line-height: 1.4em;
+}
+.FAQs .container .accordion__item .question i {
+  font-size: 2.5rem;
+  color: #9dcbf8;
+  transition: ease 0.35s;
+}
+.FAQs .container .accordion__item .answer {
+  display: none;
+}
+.FAQs .container .accordion .open .question i {
+  transform: rotate(180deg);
+  transition: ease 0.35s;
+}
+.FAQs .container .accordion .open .answer {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
 /*-- === call-action Section === --*/
 .call-action {
   width: 100%;

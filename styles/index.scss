@@ -348,6 +348,67 @@ header {
     }
 }
 
+/*-- === FAQs Section === --*/
+.FAQs {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    .container {
+        @include flex-layout;
+        flex-direction: column;
+        h1 {
+            margin-bottom: 20px;
+            font-size: 46px;
+            line-height: 1.2em;
+        }
+        .accordion {
+            width: 70%;
+            margin-top: 1.5rem;
+            &__item {
+                width: 100%;
+                margin-bottom: 8px;
+                padding: 28px 28px 16px;
+                background-color: #f1f8ff;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: 0.4s;
+                .question {
+                    width: 100%;
+                    @include flex-layout;
+                    justify-content: space-between;
+                    h4 {
+                        @include heading_h4;
+                        
+                    }
+                    i {
+                        font-size: 2.5rem;
+                        color: #9dcbf8;
+                        
+                        transition: ease 0.35s;
+                    }
+                }
+                .answer {
+                    display: none;
+                }
+                
+            }
+            .open {
+                .question i {
+                    transform: rotate(180deg);
+                    transition: ease 0.35s;
+                }
+                .answer {
+                    display: block;
+                    @include para_h4;
+                    margin-top: 10px;
+                }
+            }
+            
+        }
+    }
+}
+
 /*-- === call-action Section === --*/
 .call-action {
     width: 100%;
